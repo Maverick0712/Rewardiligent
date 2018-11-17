@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="2dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_border"
+            android:orientation="vertical"
+            android:padding="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorSectionHeader"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/reward_item_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="Reward Title"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="22sp" />
+
+                <ImageView
+                    android:id="@+id/reward_item_option_btn_image"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:padding="7dp"
+                    android:src="@drawable/button_of_three_vertical_squares" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:padding="10dp"
+                    android:src="@drawable/app_icon_wolf" />
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4dp"
+                    android:layout_weight="0.5"
+                    android:gravity="right"
+                    android:text="Day : 27"
+                    android:textColor="@color/colorSecondaryText"
+                    android:textSize="16sp"
+                    android:visibility="gone"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:gravity="fill">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="top"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ProgressBar
+                                android:id="@+id/reward_item_progressbar"
+                                style="@android:style/Widget.ProgressBar.Horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:backgroundTint="@color/colorPrimary"
+                                android:foregroundTint="@color/colorAccent"
+                                android:padding="5dp"
+                                android:progress="70"
+                                android:progressTint="#00FF00" />
+
+                            <TextView
+                                android:id="@+id/reward_item_progress_textview"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:text="70%"
+                                android:textSize="14sp" />
+
+                        </RelativeLayout>
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:background="@color/colorAccent"
+                            android:padding="2dp"
+                            android:text="Claim"
+                            android:textColor="#FFFFFF"
+                            android:textSize="20sp"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:id="@+id/reward_item_task_date_textview"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="4dp"
+                            android:layout_weight="0.5"
+                            android:gravity="left"
+                            android:text="07 Feb 2018"
+                            android:textColor="@color/colorSecondaryText"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

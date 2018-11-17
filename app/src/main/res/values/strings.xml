@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Diligent</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Planner</string>
+    <string name="title_notifications">Todo</string>
+    <string name="title_rewards">Rewards</string>
+</resources>
