@@ -4,4 +4,6 @@
     <string name="title_dashboard">Planner</string>
     <string name="title_notifications">Todo</string>
     <string name="title_rewards">Rewards</string>
+    <string name="title_activity_generic_add">Add</string>
+    <string name="action_settings">Settings</string>
 </resources>

@@ -1,6 +1,11 @@
 package com.electrodiligent.rewardiligent.model;
 
+import android.content.ContentValues;
+
+import com.electrodiligent.rewardiligent.database.TodoItemTable;
+
 import java.sql.Time;
+import java.util.UUID;
 
 /**
  * Created by sumit on 23-02-2018.
@@ -12,10 +17,15 @@ public class TodoItem {
     private  String itemDescription;
     private String itemTime;
 
+
     public TodoItem() {
     }
 
     public TodoItem(String itemID, String itemTitle, String itemDescription, String itemTime) {
+        if (itemID == null){
+            itemID = UUID.randomUUID().toString();
+        }
+
         this.itemID = itemID;
         this.itemTitle = itemTitle;
         this.itemDescription = itemDescription;
@@ -55,6 +65,13 @@ public class TodoItem {
     }
 
 
+
+    public ContentValues toValues(){
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(TodoItemTable.COLUMN_ID,itemID);
+        contentValues.put(TodoItemTable.COLUMN_NAME,itemTitle);
+        return contentValues;
+    }
 
     @Override
     public String toString() {

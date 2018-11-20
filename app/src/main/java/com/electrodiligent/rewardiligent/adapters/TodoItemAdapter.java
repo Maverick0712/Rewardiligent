@@ -45,6 +45,7 @@ public class TodoItemAdapter extends ArrayAdapter {
         TextView time =convertView.findViewById(R.id.item_timestamp);
 
         title.setText(todoItem.getItemTitle());
+        if (todoItem.getItemTime() != null)
         time.setText(todoItem.getItemTime());
 
         return convertView;

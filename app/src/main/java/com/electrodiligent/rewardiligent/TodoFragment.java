@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.electrodiligent.rewardiligent.adapters.TodoItemAdapter;
+import com.electrodiligent.rewardiligent.database.DataSource;
 import com.electrodiligent.rewardiligent.model.TodoItem;
 import com.electrodiligent.rewardiligent.sampledata.SampleDataProvider;
 
@@ -16,11 +17,14 @@ import java.sql.Time;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.electrodiligent.rewardiligent.sampledata.SampleDataProvider.todoItemList;
+
 /**
  * Created by sumit on 17-02-2018.
  */
 
 public class TodoFragment extends Fragment {
+    DataSource mDataSource;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -28,7 +32,8 @@ public class TodoFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.todo_fragment, container, false);
 
-       List<TodoItem> todoItemList = SampleDataProvider.todoItemList;
+
+      //  List<TodoItem> todoItemList = SampleDataProvider.todoItemList;
 
 //        List<String> myList = new ArrayList<>();
 //
@@ -44,7 +49,12 @@ public class TodoFragment extends Fragment {
 
        // listView.setAdapter(arrayAdapter);
 
-        TodoItemAdapter todoItemAdapter = new TodoItemAdapter(this.getActivity(),todoItemList);
+
+
+        mDataSource = new DataSource(getActivity());
+
+        List<TodoItem> todoItemListFromDB = mDataSource.getAllTodoItems();
+        TodoItemAdapter todoItemAdapter = new TodoItemAdapter(this.getActivity(),todoItemListFromDB);
         listView.setAdapter(todoItemAdapter);
 
         return view;

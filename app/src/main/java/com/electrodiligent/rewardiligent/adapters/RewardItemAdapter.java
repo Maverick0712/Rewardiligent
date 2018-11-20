@@ -1,3 +1,5 @@
+// I'm the greatest, i'm the champion
+
 package com.electrodiligent.rewardiligent.adapters;
 
 import android.content.Context;
@@ -69,8 +71,8 @@ public class RewardItemAdapter extends RecyclerView.Adapter<RewardItemAdapter.Vi
 //                Toast.makeText(mContext,"Option button clicked for"+item,Toast.LENGTH_LONG).show();
 //
 //                break;
-                default:
-                    return;
+            default:
+                return;
         }
     }
 
